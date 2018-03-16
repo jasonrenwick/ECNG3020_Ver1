@@ -25,7 +25,8 @@ SECRET_KEY = '^e5%x=d9-^x(ytnp_4w55k8k#wld0+sm((8=rjt2j5#c242*_%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'jasonren.pythonanywhere.com']
+# ALLOWED_HOSTS = [u'jasonren.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,14 +75,14 @@ WSGI_APPLICATION = 'cocoawebsite.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'uwi3020',
-        'USER': 'jdr3020',
-        'PASSWORD': 'chess',
-        'HOST': '107.180.51.21',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'uwi3020',
+    #     'USER': 'jdr3020',
+    #     'PASSWORD': 'chess',
+    #     'HOST': '107.180.51.21',   # Or an IP Address that your DB is hosted on
+    #     'PORT': '3306',
+    # }
 }
 
 
@@ -121,11 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_ROOT = u'/home/jasonren/cocoawebsite/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/jasonren/cocoawebsite/static'
+STATIC_ROOT = u'C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static'
 STATIC_URL = '/static/'
