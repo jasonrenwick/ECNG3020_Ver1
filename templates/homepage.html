@@ -1,5 +1,72 @@
 <!DOCTYPE html>
-
+<!--{% load staticfiles %}-->
 <html>
-<h1> HELLO ADRIENNE </h1>
+<head>
+    <script src="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <!--<link rel="stylesheet" href="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/bootstrap-theme.min.css">-->
+</head>
+<body>
+
+<style>
+  .form-signin {
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+</style>
+
+
+<div class="container text-center">
+    <form class="form-signin" id="login_form" method="post" action="/dashboard/gitpage/">
+      {% csrf_token %}
+
+      <br>
+      <input type="text" name="user" class="form-control" placeholder="Farm or Farmer Name, e.g: Jason Renwick or Nature Valley Farm" value="" required autofocus>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Get Data</button>
+    </form>
+</div>
+
+
+<h1 class="text-center"> Farmer Data </h1>
+	<div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped tablesorter">
+                <thead>
+                <tr>
+                  <th class="header"> Farm ID <i class="icon-sort"></i></th>
+                  <th class="header"> Primary Farmer <i class="icon-sort"></i></th>
+                  <th class="header"> Acreage <i class="icon-sort"></i></th>
+                  <th class="header"> Yield <i class="icon-sort"></i></th>
+                  <th class="header"> Location <i class="icon-sort"></i></th>
+                  <th class="header"> Six Sigma Score <i class="icon-sort"></i></th>
+                  <th class="header"> KPI Score <i class="icon-sort"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for key in data %}
+                <tr>
+                    <td>{{ key.name }}</td>
+                    <td>{{ key.blog }}</td>
+                    <td>{{ key.public_repos }}</td>
+                    <td>{{ key.public_gists }}</td>
+                    <td>{{ key.email }}</td>
+                    <td>{{ key.followers }}</td>
+                    <td>{{ key.following }}</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+            </table>
+        </div>
+    </div>
+</body>
 </html>
+
