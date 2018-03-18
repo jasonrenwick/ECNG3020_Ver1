@@ -2,13 +2,20 @@
 <!--{% load staticfiles %}-->
 <html>
 <head>
+    {% load staticfiles %}
     <script src="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+
+    <link rel="stylesheet"  href="{% static bootstrap.min.css %}">
+    <link rel="stylesheet"  href="{% static bootstrap-theme.min.css %}">
+    <link rel="stylesheet"  href="{% static customcss.css %}">
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-        <!--<link rel="stylesheet" href="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/bootstrap.min.css">-->
+
+    <!--<link rel="stylesheet" href="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/bootstrap.min.css">-->
     <!--<link rel="stylesheet" href="C:/Users/813117000/Dropbox/3020_Project_JasonRenwick/Python_django/3020_lab/ECNG3020_Ver1/static/bootstrap/bootstrap-theme.min.css">-->
 </head>
 <body>
@@ -31,6 +38,19 @@
       <br>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Get Data</button>
     </form>
+
+                    <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>New Orders!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </div>
 
 
